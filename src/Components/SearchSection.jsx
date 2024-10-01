@@ -4,7 +4,7 @@ import { GoSearch } from "react-icons/go";
 
 const SearchSection = () => {
   return (
-    <section className="bg-purple-900 text-center shadow-md md:flex ">
+    <section className="bg-purple-900 text-center shadow-md md:flex my-10 justify-center">
       <div className="bg-orange-500 shadow-md h-36 md:w-[6rem] mx-8  flex items-center justify-center">
         <FaRegArrowAltCircleRight className="text-white text-7xl" />
       </div>
@@ -18,7 +18,7 @@ const SearchSection = () => {
             <input
               type="text"
               placeholder="e.g Chemical Engineering"
-              className="my-4 w-[15rem] md:w-[17rem] lg:w-[30rem] h-14 text-center mx-auto  "
+              className="my-4 w-[15rem] md:w-[17rem] lg:w-[55rem] h-14 text-center mx-auto  "
             />
           </div>
 

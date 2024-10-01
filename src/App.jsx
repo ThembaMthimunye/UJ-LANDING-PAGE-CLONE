@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Example />
+       <Example />
 
       <Hero />
 
@@ -26,7 +26,7 @@ function App() {
        <Swipper /> 
        <ConnectUj /> 
        <Gauge /> 
-      <Footer />
+      <Footer /> 
     </div>
   );
 }

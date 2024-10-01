@@ -84,7 +84,7 @@ export default () => {
                   <img
                     src={data.src}
                     alt=""
-                    className="bg-cover md:w-[560px] md:h-[300px] md:w-[10rem] rounded-md pt-8 size-[8rem] hover:scale-110 duration-500"
+                    className="bg-contain bg-center md:w-[560px] md:h-[300px] md:w-[10rem] rounded-md pt-8 size-[8rem] hover:scale-110 duration-500"
                   />
                   <h2 className="md:text-xl font-bold my-5 text-[10px] font-serif">
                     {data.head}

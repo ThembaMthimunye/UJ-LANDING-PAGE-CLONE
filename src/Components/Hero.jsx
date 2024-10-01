@@ -30,7 +30,7 @@ const Hero = () => {
 
   return (
     <div className="px-8">
-      <div className="grid grid-cols-2 gap-3 mt-10 md:grid md:grid-cols-4 lg:grid-cols-6 ">
+      <div className="grid grid-cols-2 gap-3 mt-10 md:grid md:grid-cols-6 lg:grid-cols-6 ">
         {images.map((image, index) => (
           <div key={index} className="bg-smokewhite-900">
             <div className="bg-gray-200 h-[245px] shadow-md flex flex-col items-center justify-center p-4 ">

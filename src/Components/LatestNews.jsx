@@ -35,20 +35,38 @@ const LatestNews = () => {
             head:"UJ celebrates winners of the 2024 Three Minute Thesis Competition",
             disc:"Senzo Ndlangamandla CA(SA) has been described as a visionary leader igniting excellence in accoun...",
         },
+        {
+          id:3,
+          src:"https://news.uj.ac.za/wp-content/uploads/2024/09/2024-09-17-CBE-Eagles-Fly-Above-the-Storm-Womens-Conference-65-scaled.jpg",
+          head:"Vice-Chancellor Message – 20 September 2024",
+          disc:"Dear UJ community, As the Heritage Month celebrations continue in South Africa, I pondered some o...",
+      },
+      {
+          id:4,
+          src:"https://news.uj.ac.za/wp-content/uploads/2024/09/Senzo-Ndlangamandla-CASA-leads-with-the-people-fostering-inclusivity-and-empowerment-1.jpg",
+          head:"UJ’s Eagles Fly Above the Storm conference shifts mindsets and breaks barriers",
+          disc:"The University of Johannesburg (UJ)’s College of Business and Economics (CBE) recently hosted the...",
+      },
+      {
+          id:5,
+          src:"https://news.uj.ac.za/wp-content/uploads/2024/09/UJ-Mens-Rowing-Team.jpg",
+          head:"UJ celebrates winners of the 2024 Three Minute Thesis Competition",
+          disc:"Senzo Ndlangamandla CA(SA) has been described as a visionary leader igniting excellence in accoun...",
+      },
     ]
   return (
    
-     <Slide>
+     <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3 place-items-center">
       {data.map((data, index) => (
-        <div className="each-slide-effect " key={index}>
+        <div className="" key={index}>
           <div className=" bg-cover ">
-            <img src={data.src} alt="" className="bg-cover w-[100] h-[100] md:w-[10rem]" />
+            <img src={data.src} alt="" className="bg-cover size-[8rem] md:w-[10rem]" />
             <h2 className='text-xl font-bold'>{data.head}</h2>
             <p>{data.disc}</p>
           </div>
         </div>
       ))}
-    </Slide>
+    </div>
 
   )
 }

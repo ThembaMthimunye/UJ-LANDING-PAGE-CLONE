@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { RxCross2 } from "react-icons/rx";
+import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { id: 1, name: "Student", link: "#" },
-    { id: 2, name: "Staff", link: "#" },
-    { id: 3, name: "Alumni & Convocation", link: "#" },
-    { id: 4, name: "About Us", link: "#" },
-    { id: 5, name: "Contact Us", link: "#" },
-    { id: 6, name: "Give to UJ", link: "#" },
-    { id: 7, name: "Brand Shop", link: "#" },
+    { id: 1, name: "Students ", link: "#" },
+    { id: 2, name: "Staff ", link: "#" },
+    { id: 3, name: "Alumni & Convocation ", link: "#" },
+    { id: 4, name: "About Us ", link: "#" },
+    { id: 5, name: "Contact Us ", link: "#" },
+    { id: 6, name: "Give to UJ ", link: "#" },
+    { id: 7, name: "Brand Shop ", link: "#" },
   ];
 
   const Navlinks = [
@@ -28,50 +27,50 @@ const Navbar = () => {
   ];
 
   return (
-    <nav>
-      <div className="bg-[#1e0e47] md:flex pt-10 md:pt-0 md:items-center">
-        <ul className="flex justify-center text-[10px] text-white mx-auto md:ml-[43%] md:justify-around md:text-[17px] md:font-semibold ">
+    <nav className="overflow-hidden "> 
+      <div className="bg-[#1e0e47] lg:flex h-[8rem] lg:h-12 md:h-[10rem]  ">
+        <ul className="grid grid-cols-3 md:flex lg:grid-cols-7   lg:place-items-center  text-center text-white px-4 ">
           {links.map((link) => (
-            <li className="mr-2 md:mr-0 hover:text-orange-500 " key={link.id}>
+            <li className="hover:text-orange-500 text-[9px] md:text-[10px]   lg:text-[12px] -ml-5 md:my-10 md:ml-8 hover:text-orange-500 my-2" key={link.id}>
               <a href={link.link}>
-                {link.name} <span>|</span>
+                {link.name} < span className="ml-0.5">|</span>
               </a>
             </li>
           ))}
         </ul>
-        <div className="grid mt-10 place-content-center md:mt-0">
-          <p className="text-white mb-5">
-            <span className="text-[10px] mr-2">Brand Shop</span>
-            <span className="text-2xl font-bold">Our Future. Reimagined.</span>
+        <div className="lg:flex justify-center align-center">
+          <p className="text-white text-center lg:flex align-middle">
+            <span className="hidden">Brand Shop</span>
+            <span className="font-bold text-[25px]  ">Our Future. Reimagined.</span>
           </p>
         </div>
       </div>
-      <div className="flex justify-between  shadow-md md:mt-8   ">
-        <div className="flex">
+      <div className="flex shadow-md justify-between px-3 md:px-5 bg-gray-100">
+        <div className="lg:grid lg:place-items-center">
           <img
-            className="h-[90px] ml-3 md:translate-x-6 md:size-[8rem] md:-mt-[5rem] md:ml-[8rem]"
+            className="h-[90px] "
             src="https://www.uj.ac.za/wp-content/uploads/2021/09/university-of-johannesburg-logo.png"
             alt="UJ Logo"
           />
         </div>
         <div>
-          <div className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <div onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
               <RxCross2 className="text-3xl font-bold text-black" />
             ) : (
-              <RxHamburgerMenu className="text-3xl font-bold text-black mr-5 mt-9" />
+              <RxHamburgerMenu className="text-3xl font-bold text-black mt-9 lg:hidden" />
             )}
           </div>
-          <div className={`${isOpen ? "block" : "hidden"} md:block`}>
-            <ul className="md:flex md:justify-around md:text-2xl  md:text-black-200  font-thin">
+          <div className={`${isOpen ? "block" : "hidden"} lg:block `}>
+            <ul className="font-thin lg:flex">
               {Navlinks.map((Navlink) => (
-                <li key={Navlink.id} className="mr-10 hover:text-orange-500">
-                  <a href={Navlink.link}>{Navlink.name}</a>
+                <li key={Navlink.id} className="mr-10 lg:mr-0 lg:ml-3 font-bold lg:font-normal mt-4 hover:text-orange-500">
+                  <a className="" href={Navlink.link}>{Navlink.name}</a>
                 </li>
               ))}
               <div className="flex justify-around pr-[10rem]">
                 <FaSearch className="text-3xl font-bold text-black hidden" />
-                <RxHamburgerMenu className="text-3xl font-bold text-black ml-3 hidden" />
+                <RxHamburgerMenu className="text-3xl font-bold text-black hidden" />
               </div>
             </ul>
           </div>

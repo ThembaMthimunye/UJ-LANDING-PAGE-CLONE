@@ -49,13 +49,13 @@ const ConnectUj = () => {
         {data.map((list) => (
           <div className="p-5">
             <div className="group ">
-              <img className="group-hover:scale-110 duration-300" src={list.src} alt="" />
+              <img className="group-hover:scale-110 duration-300  md:h-[15rem]" src={list.src} alt="" />
               <div className="translate-x-4 -mt-[5rem] -ml-4">
                 <p className=" my-8 py-2 bg-white w-[9rem] font-bold h-[4rem] text-center group-hover:bg-orange-500  group-hover:h-[3rem] group-hover:text-white flex justify-center items-center">
                   {list.disc}
                 </p>
               </div>
-              <p className="p-2 text-[18px]">{list.text}</p>
+              <p className="md:hidden lg:block p-2 text-[18px]">{list.text}</p>
             </div>
           </div>
         ))}

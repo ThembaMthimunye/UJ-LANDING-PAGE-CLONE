@@ -10,11 +10,11 @@ const Example = () => {
   ];
 
   return (
-    <Slide>
+    <Slide >
       {images.map((image, index) => (
-        <div className="each-slide-effect " key={index}>
+        <div className="each-slide-effect  " key={index}>
           <div className="flex  justify-center bg-cover ">
-            <img src={image} alt="" className="bg-cover w" />
+            <img src={image} alt="" className="bg-cover" />
           </div>
         </div>
       ))}
